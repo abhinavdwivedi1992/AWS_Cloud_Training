@@ -1,0 +1,201 @@
+
+1) pwd - Present Working Directory
+
+2) mkdir - to make directory
+
+3) ls - For listing
+
+4) touch - To create an empty file.
+
+5) cd -change directory.
+
+6) date - To get current date and time
+
+7) history - to check history of your commands.
+
+
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls
+aaa  abc  abc.sh  abc.txt  adddd  def
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:32 def
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -lrt
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:32 def
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+ubuntu@ip-172-31-41-89:~$ ls -lrth
+total 8.0K
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:32 def
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -lth
+total 8.0K
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:32 def
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -lrh
+total 8.0K
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:32 def
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -lrth
+total 8.0K
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:32 def
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ date
+Wed May 15 03:41:02 UTC 2024
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ history
+    1  clear
+    2  pwd
+    3  mkdir abc def
+    4  ls
+    5  touch abc
+    6  touch adddd
+    7  touch abc
+    8  ls
+    9  ls -l
+   10  touch abc
+   11  ls -l
+   12  vi abc
+   13  ls -l
+   14  touch aaa
+   15  ls -l
+   16  touch abc
+   17  ls -l
+   18  vi abc
+   19  cd abc/
+   20  touch abc
+   21  ls
+   22  pwd
+   23  ls -l
+   24  cd ..
+   25  ls -lrth
+   26  pwd
+   27  touch abc.txt
+   28  pwd
+   29  ls -lrth
+   30* ls -
+   31  touch abc.sh
+   32  ls -lrth
+   33  clear
+   34  pwd
+   35  ls
+   36  ls -l
+   37  ls -lrt
+   38  ls -lrth
+   39  ls -lth
+   40  ls -lrh
+   41  ls -lrth
+   42  date
+   43  pwd
+   44  history
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:32 def
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -lrth
+total 8.0K
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:32 def
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ cd  def
+ubuntu@ip-172-31-41-89:~/def$ pwd
+/home/ubuntu/def
+ubuntu@ip-172-31-41-89:~/def$
+ubuntu@ip-172-31-41-89:~/def$ ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:32 def
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -lrt
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:32 def
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4096 May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+ubuntu@ip-172-31-41-89:~$ ls -lrth
+total 8.0K
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:32 def
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:34 adddd
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:36 aaa
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:36 abc
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$
+ubuntu@ip-172-31-41-89:~$ ls -lth
+total 8.0K
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.sh
+-rw-rw-r-- 1 ubuntu ubuntu    0 May 15 03:37 abc.txt
+drwxrwxr-x 2 ubuntu ubuntu 4.0K May 15 03:36 abc
