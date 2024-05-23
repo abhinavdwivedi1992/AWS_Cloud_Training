@@ -1,0 +1,138 @@
+1) sudo su
+2) apt get update
+3) curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+4) unzip awscliv2.zip
+5) sudo ./aws/install
+6) aws --version
+
+
+Access key
+AKIAZQ3DN5AIJOV5AOUC
+
+Secret access key
+a/noevSwQE1ERgvgEfz2G9PBJEGFE2arDGvviik3
+
+
+ubuntu@ip-172-31-34-0:~$ aws configure
+AWS Access Key ID [None]: AKIAZQ3DN5AIJOV5AOUC
+AWS Secret Access Key [None]: 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
+Default region name [None]:
+Default output format [None]:
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+
+
+
+ubuntu@ip-172-31-34-0:~$ aws configure
+AWS Access Key ID [None]: AKIAZQ3DN5AIJOV5AOUC
+AWS Secret Access Key [None]: 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
+Default region name [None]:
+Default output format [None]:
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3
+
+An error occurred (InvalidBucketName) when calling the ListObjectsV2 operation: The specified bucket is not valid.
+ubuntu@ip-172-31-34-0:~$ aws s3 ls
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3//
+
+An error occurred (InvalidBucketName) when calling the ListObjectsV2 operation: The specified bucket is not valid.
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3:\//
+ubuntu@ip-172-31-34-0:~$ ^C
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3:\//
+ubuntu@ip-172-31-34-0:~$ ^C
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+2024-05-23 03:22:56 aaaabhinav
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls
+2024-05-23 03:22:56 aaaabhinav
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+2024-05-23 03:22:56 aaaabhinav
+ubuntu@ip-172-31-34-0:~$ date
+Thu May 23 03:23:23 UTC 2024
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 mb s3://mybucket_vsics
+make_bucket failed: s3://mybucket_vsics An error occurred (InvalidBucketName) when calling the CreateBucket operation: The specified bucket is not valid.
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 mb s3://mybucketvsics
+make_bucket: mybucketvsics
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+2024-05-23 03:22:56 aaaabhinav
+2024-05-23 03:24:19 mybucketvsics
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+2024-05-23 03:22:56 aaaabhinav
+2024-05-23 03:24:19 mybucketvsics
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 mb s3://mybucketjhanvi --region ap-south-1
+make_bucket: mybucketjhanvi
+ubuntu@ip-172-31-34-0:~$ aws s3 mb s3://mybucketshambhavi --region ap-south-1
+make_bucket: mybucketshambhavi
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 mb s3://mybucketsankriti --region ap-south-1
+make_bucket: mybucketsankriti
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+2024-05-23 03:22:56 aaaabhinav
+2024-05-23 03:25:57 mybucketjhanvi
+2024-05-23 03:26:35 mybucketsankriti
+2024-05-23 03:26:22 mybucketshambhavi
+2024-05-23 03:24:19 mybucketvsics
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3:// |wc -l
+5
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ vi abhay.txt
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ ls -lrth
+total 58M
+drwxr-xr-x 3 root   root   4.0K May 22 18:15 aws
+-rw-r--r-- 1 root   root   6.1K May 23 03:02 awscliv2.sig
+-rw-r--r-- 1 root   root    58M May 23 03:09 awscliv2.zip
+-rw-rw-r-- 1 ubuntu ubuntu   24 May 23 03:27 abhay.txt
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 cp abhidata.txt s3://mybucket ^C
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 cp abhay.txt s3://mybucketshambhavi
+upload: ./abhay.txt to s3://mybucketshambhavi/abhay.txt
+ubuntu@ip-172-31-34-0:~$ aws s3 cp abhay.txt s3://mybucketvsics
+upload: ./abhay.txt to s3://mybucketvsics/abhay.txt
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 rb s3://tgsbucket --force ^C
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+2024-05-23 03:22:56 aaaabhinav
+2024-05-23 03:25:57 mybucketjhanvi
+2024-05-23 03:26:35 mybucketsankriti
+2024-05-23 03:26:22 mybucketshambhavi
+2024-05-23 03:24:19 mybucketvsics
+ubuntu@ip-172-31-34-0:~$ aws s3 rb s3://mybucketshambhavi --force
+delete: s3://mybucketshambhavi/abhay.txt
+remove_bucket: mybucketshambhavi
+ubuntu@ip-172-31-34-0:~$ aws s3 rb s3://mybucketvsics --force
+delete: s3://mybucketvsics/abhay.txt
+remove_bucket: mybucketvsics
+ubuntu@ip-172-31-34-0:~$ aws s3 ls s3://
+2024-05-23 03:22:56 aaaabhinav
+2024-05-23 03:25:57 mybucketjhanvi
+2024-05-23 03:26:35 mybucketsankriti
