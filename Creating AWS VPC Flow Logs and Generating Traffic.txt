@@ -1,0 +1,130 @@
+
+
+Creating AWS VPC Flow Logs and Generating Traffic
+
+
+
+Task 1: Create CloudWatch Logs
+Navigate to the Services menu at the top and choose CloudWatch under Management and Governance.
+
+Click on Log Groups in the left side panel and Click on Create Log Group. 
+
+Enter the Log Group Name: whizvpclogs and click on Create.
+
+
+Task 2: Create an IAM Policy
+
+1) Navigate to the Services menu at the top and choose IAM under  Security, Identity and Compliance.   
+
+2) Click on Policies on the left side panel and click on Create policy.
+
+3) Select JSON and clear the existing text in the editor and paste the code below and click on Next:Tags
+
+
+
+{
+
+    "Version": "2012-10-17",
+
+    "Statement": [
+
+        {
+
+            "Action": [
+
+                "logs:CreateLogGroup",
+
+                "logs:CreateLogStream",
+
+                "logs:PutLogEvents",
+
+                "logs:DescribeLogGroups",
+
+                "logs:Describe*",
+
+                "logs:DescribeLogStreams"
+
+            ],
+
+            "Effect": "Allow",
+
+            "Resource": "*"
+
+        }
+
+    ]
+
+}
+
+
+4) Add Tags: No changes needed, click on Next: Review
+
+5) Enter mytestpolicy as the policy name and click on Create Policy. Now the policy has been created.
+
+
+
+Task 3: Create an IAM Role
+Click on Roles on the left side panel and click on Create role button.
+
+Create role:
+
+Select type of trusted entity: Select AWS Service
+
+Choose a use case: Select EC2
+
+Click on Next:Permissions
+
+Beside Filter Policies option, search mytestpolicy and select it. Click on Next: Tags.
+
+Search for the whizrole and open it. Select Trust Relationships and click on Edit Trust Relationship.
+
+
+
+Remove the existing code, copy and paste in the below code, then click on Update Trust Policy.
+
+
+{
+
+  "Version": "2012-10-17",
+
+  "Statement": [
+
+    {
+
+      "Sid": "",
+
+      "Effect": "Allow",
+
+      "Principal": {
+
+        "Service": "vpc-flow-logs.amazonaws.com"
+
+      },
+
+      "Action": "sts:AssumeRole"
+
+    }
+
+  ]
+
+}
+
+
+
+
+
+sudo su
+
+yum -y update
+
+yum install httpd -y
+
+cd /var/www/html
+
+echo "Response coming from server" > /var/www/html/index.html
+
+systemctl start httpd
+
+systemctl enable httpd
+
+systemctl status httpd 
